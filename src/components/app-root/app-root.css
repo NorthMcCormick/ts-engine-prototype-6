@@ -13,3 +13,13 @@ h1 {
   color: #fff;
   padding: 0 12px;
 }
+
+.app-home {
+  height: 100%;
+  width: 100%;
+}
+
+.app-home canvas {
+  height: 100%;
+  width: 100%;
+}
