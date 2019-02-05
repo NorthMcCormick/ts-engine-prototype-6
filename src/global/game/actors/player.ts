@@ -30,7 +30,8 @@ export class Player extends AActor {
 		this.mesh.position.z = 8;
 
 		var material = new StandardMaterial('uh', this._scene); // new GridMaterial("grid", this._scene);
-		material.ambientColor = new Color3(1, 0, 0);
+		material.ambientColor = new Color3(0, 1, 0);
+		material.diffuseColor = new Color3(0, 1, 0);
 		this.mesh.material = material;
 		// this.mesh.material = material;
 

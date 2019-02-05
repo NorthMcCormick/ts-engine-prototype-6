@@ -1,5 +1,5 @@
 import { AScene } from "../../engine/scene";
-import { Engine, FollowCamera, Vector3, MeshBuilder, PhysicsImpostor, HemisphericLight, StandardMaterial, Color3 } from "@babylonjs/core";
+import { Engine, Camera, FollowCamera, Vector3, MeshBuilder, PhysicsImpostor, HemisphericLight, StandardMaterial, Color3 } from "@babylonjs/core";
 import { Player } from "../actors/player";
 
 import "@babylonjs/core/Meshes/meshBuilder";
@@ -45,8 +45,9 @@ export class SceneTest extends AScene {
 
 		ground.position.y = -1;
 
-		var groundMaterial = new StandardMaterial('uh', this._scene); // new GridMaterial("grid", this._scene);
-		groundMaterial.ambientColor = new Color3(0, 1, 0);
+		var groundMaterial = new StandardMaterial('uha', this._scene); // new GridMaterial("grid", this._scene);
+		groundMaterial.ambientColor = new Color3(1, 0, 0);
+		groundMaterial.diffuseColor = new Color3(1, 0, 0);
 
 		ground.material = groundMaterial;
 
@@ -59,6 +60,13 @@ export class SceneTest extends AScene {
 		this._camera.rotationOffset = 0;
 		this._camera.cameraAcceleration = 0.005;
 		this._camera.maxCameraSpeed = 15;
+
+		this._camera.setCameraRigMode(Camera.RIG_MODE_VR, {
+			interaxialDistance: 0.0637
+		})
+
+		// this._camera.cameraRigMode = Camera.RIG_MODE_VR;
+		// this._camera.setCameraRigParameter('interaxialDistance', 0.0637);
 
 		this._camera.attachControl(this._canvas, true);
 

@@ -1,3 +1,9 @@
+# AEngine
+
+What's Inside:
+- BabylonJS 4.x beta (all ES6 modules, ts, tree shaking)
+- Custom game engine framework to tie this all together
+
 # Stencil App Starter
 
 Stencil is a compiler for building fast web apps using Web Components.
